@@ -1,75 +1,126 @@
-# sre-challenge-repo
- Flask App: Hello World
-# Flask App: Hello World
+# SRE Challenge Repository
 
-## Project Title and Description
+## Overview
 
-**Flask App: Hello World**  
-This repository contains a minimal Flask application that displays "Hello, World!" when accessed. It's a simple starting point for anyone learning Flask.
-
----
-
-## Getting Started
-
-### Prerequisites
-To set up and run this application, ensure you have the following installed:
-
-- Python 3.8 or later
-- pip (Python package manager)
-
-### Installation Steps
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Pablovindas42/<your-repo-name>.git
-   cd <your-repo-name>
-   ```
-
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. Install Flask:
-   ```bash
-   pip install flask
-   ```
-
-4. Create a `app.py` file with the following content:
-   ```python
-   from flask import Flask
-
-   app = Flask(__name__)
-
-   @app.route("/")
-   def hello_world():
-       return "Hello, World!"
-
-   if __name__ == "__main__":
-       app.run(debug=True)
-   ```
-
-5. Run the Flask application:
-   ```bash
-   python app.py
-   ```
-
-6. Open your browser and go to [http://127.0.0.1:5000](http://127.0.0.1:5000) to view the app.
-
----
-
-## Usage Examples
-
-### Example: Hello, World!
-Visit the homepage to see the message "Hello, World!" displayed on the screen.
+The **SRE Challenge Repository** is designed to showcase and evaluate practical Site Reliability Engineering (SRE) skills. This repository contains tools, scripts, and configurations that emphasize the principles of reliability, scalability, observability, and automation in modern software systems.
 
 ---
 
 ## Features
 
-- Minimal Flask app structure for beginners
-- Displays "Hello, World!" as a response to HTTP requests
+- **Automation:** Scripts and tools to automate common tasks and workflows.
+- **Monitoring & Observability:** Demonstrates integration with monitoring systems for system health and performance tracking.
+- **Error Handling:** Provides mechanisms to identify, report, and resolve issues efficiently.
+- **Scalability:** Configurations and tools designed to handle increasing system demands.
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
+
+## Installation
+
+Follow these steps to set up and run the project:
+
+### Prerequisites
+- Python 3.8 or higher
+- A virtual environment tool (`venv` or `virtualenv`)
+- Dependencies listed in `requirements.txt`
+
+### Steps
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/<your-username>/sre-challenge-repo.git
+   cd sre-challenge-repo
+   ```
+
+2. **Set Up a Virtual Environment:**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Set Up Environment Variables:**
+   - Copy the `.env.example` file to `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Update `.env` with your configuration (e.g., API keys, endpoints).
+
+---
+
+## Usage
+
+Run the main application using:
+```bash
+python src/main.py
+```
+
+### Example Commands
+| Command                 | Description                                     |
+|-------------------------|-------------------------------------------------|
+| `python src/main.py`    | Runs the main application.                      |
+| `python tests/run_tests.py` | Runs the test suite for the project.         |
+
+---
+
+## Testing
+
+Testing is a crucial aspect of ensuring reliability. Run the tests as follows:
+
+1. **Run Unit Tests:**
+   ```bash
+   python -m unittest discover tests/
+   ```
+
+2. **Run All Tests with Coverage:**
+   ```bash
+   pytest --cov=src
+   ```
+
+---
+
+## Project Structure
+
+The project is organized into the following structure:
+
+```
+sre-challenge-repo/
+│
+├── src/                # Source code
+│   ├── main.py         # Entry point of the application
+│   └── ...             # Other modules
+│
+├── tests/              # Test cases
+│   ├── test_main.py    # Unit tests for main.py
+│   └── ...             # Other test files
+│
+├── docs/               # Documentation files
+│   └── architecture.md # High-level architecture overview
+│
+├── configs/            # Configuration files
+│   └── config.yaml     # Application settings
+│
+├── requirements.txt    # Dependencies
+├── README.md           # Project documentation
+├── LICENSE             # License file
+└── .env.example        # Example environment variables
+```
 
 ---
 
@@ -77,29 +128,37 @@ Visit the homepage to see the message "Hello, World!" displayed on the screen.
 
 We welcome contributions! To contribute:
 
-1. Fork the repository.
-2. Clone the forked repository to your local machine:
+1. **Fork the Repository:** Click the "Fork" button on the top-right corner of the repository page.
+2. **Clone Your Fork:**
    ```bash
-   git clone https://github.com/<your-username>/<your-forked-repo>.git
+   git clone https://github.com/<your-username>/sre-challenge-repo.git
+   cd sre-challenge-repo
    ```
-3. Create a new branch for your feature:
+3. **Create a Feature Branch:**
    ```bash
    git checkout -b feature/your-feature-name
    ```
-4. Make your changes and commit them:
+4. **Commit Your Changes:**
    ```bash
    git add .
-   git commit -m "Add: Description of your feature"
+   git commit -m "Add your feature or fix description"
    ```
-5. Push your branch to GitHub:
+5. **Push Your Branch:**
    ```bash
    git push origin feature/your-feature-name
    ```
-6. Open a Pull Request in the original repository.
+6. **Submit a Pull Request:** Go to your forked repository, click "Compare & pull request," and describe your changes.
 
 ---
 
-## Author
+## License
 
-Pablo de Jesús Vindas Rodríguez
-Nueva línea de prueba
+This project is licensed under the [MIT License](LICENSE). See the `LICENSE` file for full details.
+
+---
+
+## Contact
+
+For any questions or suggestions, feel free to open an issue in the repository or contact the repository owner.
+
+```
